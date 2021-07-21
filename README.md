@@ -20,16 +20,14 @@ Anyone trying to get to grips with a new subject, here basic computer programmin
 some direction by someone versed in the subject. The MLWB is no different and its use and application
 is best achieved through guidance and mentoring from a someone taking the lead of tutor to the student.
 
-Motivation
-^^^^^^^^^^
+# Motivation
 The MLWB was designed for the author's grand children, to provide them with some opportunity to
 understand how a computer program can be easily created to produce effects in the real world. 
 It was hoped that through thinking about the logical steps needed to play simple music and/or 
 turn lights (LEDs) on and off that this would peak and stimulate their desire to explore the potential
 of programming more deeply.
 
-Prerequisites
-^^^^^^^^^^^^^
+# Prerequisites
 - a target audience - the student, young or old, who has a willingness to explore how a computer program
   can do something quickly, easily and interesting,
 - a supervisor - tutor, to act as educator - mentor and teacher of the MLWB.  
@@ -45,15 +43,13 @@ Prerequisites
   
 - and finally, a plan for what the tutor will introduce to the student, building from session to session.
 
-A Note About Terminology & Index Referencing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# A Note About Terminology & Index Referencing
 Youngsters and those new to doing anything computing related often find it difficult to understand computing
 related terms and that referencing can start at 0. Therefore, the MLWB tries to avoid computing terms
 wherever possible and support a students desire to reference from 1, not 0. For example, the first LED (0)
 is referred to as light1, the second LED (1) as light2, etc.
 
-MLWB Commands
-^^^^^^^^^^^^^
+# MLWB Commands
 The MLWB command set falls largely into two groups - those performing musical instructions and those
 performing actions with lights. However, there is one command that bridges both 'camps'. This is the
 play command which is an overloaded function. It can be used either to:
@@ -61,8 +57,7 @@ play command which is an overloaded function. It can be used either to:
   2. as for 1. but with an additional parameter specifying a light number (LED) to be illuminated 
      whilst the note is playing. It is an overloaded function which can be used in either way.
      
-Music Commands
-^^^^^^^^^^^^^^
+# Music Commands
 play      - will play the given note for the given duration. eg play(note_C4, minim), play(note_FS2, crot + quav), etc.
 play      - an overloaded version of the command, this one allowing a light (LED) to be specified for illumination
             whist the given note is playing. eg play(note_C4, minim, light5), play(note_FS2, crot + quav, light1),
@@ -70,8 +65,7 @@ play      - an overloaded version of the command, this one allowing a light (LED
 rest      - rests for the given duration, during which time silence is maintained,. eg rest(quav), rest(0.5), etc.
 set_tempo - sets the pace of a musical piece in beats per minute. eg set_tempo(allegro), set_tempo(144), etc.
 
-Light Commands
-^^^^^^^^^^^^^^
+# Light Commands
 light_on       - turns on the given light (LED). eg light_on(light1), light_on(7), etc.
 light_off      - turns off the given light (LED). eg light_off(light1), light_off(7), etc.
 all_lights_on  - turns on all 8 lights. eg all_lights_on().
@@ -87,14 +81,12 @@ strobe_all_lights
 wait           - waits for the given duration (seconds) halting any processing other than existing flash_light 
                  commands. eg wait(5.5), waits for 5.5 seconds.
                  
-Shrink-wrapped Examples
-^^^^^^^^^^^^^^^^^^^^^^^
+# Shrink-wrapped Examples
 To kick things off, two tabs are included that provided examples for musical melodies/tunes and lighting sequences. 
 Use these to see how each native command (function) can be used, individually and together. Indeed, these may
 also be used as instructional guides between tutor and student.
 
-MLWB Layout
-^^^^^^^^^^^
+# MLWB Layout
 The MLWB software is written in Arduino C++ and comprises six tabs. The tabs are:
 - music_and_lights_workbench - this tab provides an overview of the MLWB, and echoes much of this article.
 - functions_lights - this tab defines the functions underpinning the MLWB commands dealing with LED control.
@@ -109,13 +101,11 @@ The MLWB software is written in Arduino C++ and comprises six tabs. The tabs are
   of commands for playing tones (music) on the attached speaker/buzzer. Again, these can be used as instructional
   examples between tutor and student.
   
-The Crib Sheet
-^^^^^^^^^^^^^^
+# The Crib Sheet
 The crib sheet documents all of the preset values and commands available for use by the MLWB. Download this 
 as an aide memoir and ready reference.
 
-Finally
-^^^^^^^
+# Finally
 I feel I need to declare that my musical knowledge, skill and prowess is next to nil - I would think that a 
 post box is musically more gifted!
 My approach in all matters musical has been mechanistic with much use of the internet in constructing the 
