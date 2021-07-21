@@ -5,8 +5,7 @@ Ron D Bentley, Stafford, UK, July 2021
 This example and code is in the public domain and
 may be used without restriction and without warranty.
 
-Introduction
-^^^^^^^^^^^^
+# Introduction
 The Music and Lights Workbench (MLWB) has been designed to introduce anyone not familiar with or 
 new to the subject of computer programming.  The approach taken is to provide a set of simple to use
 and logically applied commands (functions) that link the computer to the outside world through the
