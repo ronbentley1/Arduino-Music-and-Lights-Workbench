@@ -93,6 +93,9 @@ flash_light    - flashes the given light for the given flash interval until rede
                  the microcontroller's timer1, via an ISR. In this way, flash sequences will continue to
                  run even though other commands may be executed subsequent to a flash_light command. 
                  Flashing continues until another command is executed on the same light (LED).
+strobe_all_lights
+               - strobes all lights for the given number of cycles illuminating each light for the
+                 given time.
 wait           - waits for the given duration (seconds) halting any processing other than existing flash_light 
                  commands. eg wait(5.5), waits for 5.5 seconds.
 
