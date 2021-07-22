@@ -130,6 +130,8 @@
 
 float default_tempo = float(animato); // default tempo - beats per minute
 
+float current_tempo = default_tempo;
+
 float timings[6];                     // holds timings for each defined note/rest duration
 
 //
@@ -145,9 +147,10 @@ float timings[6];                     // holds timings for each defined note/res
 //
 // set tempo by adjusting durations of note durations
 //
-void set_tempo(float tempo) {
+void set_tempo(float new_tempo) {
   float crotchet_duration;
-  crotchet_duration = 60 / tempo;    // timing for 1 beat
+  current_tempo = new_tempo; // keep current tempo up to date in case it needs to be queried
+  crotchet_duration = 60 / new_tempo;// timing for 1 beat
   semib     = crotchet_duration * 4; // semibrieve, 4 beats
   dot_minim = crotchet_duration * 3; // dotted mimin, 3 beats
   minim     = crotchet_duration * 2; // minim, 2 beats
@@ -158,7 +161,7 @@ void set_tempo(float tempo) {
 
 //
 // play given note for given duration.
-// observe that this function is 'blocking', although the tone 
+// observe that this function is 'blocking', although the tone
 // function is 'non-blocking', ie control stays with the function
 // until note has completed.
 //
@@ -169,7 +172,7 @@ void play(int note, float duration) {
 
 //
 // play given note for given duration and illuminate given light (led).
-// observe that this function is 'blocking', although the tone 
+// observe that this function is 'blocking', although the tone
 // function is 'non-blocking', ie control stays with the function
 // until note has completed.
 //
@@ -206,7 +209,7 @@ void setup() {
   // enable timer1 compare interrupt
   TIMSK1 |= (1 << OCIE1A);             // OCIE1A = 1
   interrupts();
-  
+
   //
   // now set each defined light (led) output pin and
   // test prior to main loop processing - visual check
@@ -218,7 +221,7 @@ void setup() {
     light_off(light + 1);
     wait(0.05);
   }
-  
+
   //
   // finally set up tone requirements and default tempo
   //
