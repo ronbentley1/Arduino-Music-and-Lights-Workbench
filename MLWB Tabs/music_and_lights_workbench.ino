@@ -1,8 +1,4 @@
 /*
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Music & Lights Workbench - ABOUT THIS PROJECT %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 Ron D Bentley, Stafford, UK, July 2021
 
 This example and code is in the public domain and

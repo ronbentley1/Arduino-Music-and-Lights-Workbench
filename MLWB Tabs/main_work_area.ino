@@ -42,11 +42,8 @@ void loop() {
   ode_to_joy();
   wait(3);
 
-  // penny_lane();
-  // wait(3);
-  
   // some light examples...
-  
+
   sweep_lights();
   wait(3);
 

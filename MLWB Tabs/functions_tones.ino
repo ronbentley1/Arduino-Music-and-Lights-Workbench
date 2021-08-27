@@ -123,10 +123,7 @@
 #define note_D8  4699
 #define note_DS8 4978
 
-// using pin 11 because it allows a speaker to be inserted into this pin and adjacent ground
-// on UNO on board without any wiring. Note any polarity requirements of the speaker.
-// alternatively (for better sound qulity) use an 8 ohm speaker.
-#define speaker  11 // digital pin number
+#define speaker  11 // digital pin number for buzzer/speaker
 
 float default_tempo = float(animato); // default tempo - beats per minute
 
@@ -150,7 +147,7 @@ float timings[6];                     // holds timings for each defined note/res
 void set_tempo(float new_tempo) {
   float crotchet_duration;
   current_tempo = new_tempo; // keep current tempo up to date in case it needs to be queried
-  crotchet_duration = 60 / new_tempo;// timing for 1 beat
+  crotchet_duration = 60 / new_tempo;// timing in seconds for 1 beat
   semib     = crotchet_duration * 4; // semibrieve, 4 beats
   dot_minim = crotchet_duration * 3; // dotted mimin, 3 beats
   minim     = crotchet_duration * 2; // minim, 2 beats
@@ -167,7 +164,7 @@ void set_tempo(float new_tempo) {
 //
 void play(int note, float duration) {
   tone(speaker, note, duration * 1000); // play the given note for the given duration
-  wait(duration);                      // wait for note to complete
+  wait(duration);                       // wait for note to complete
 }
 
 //
